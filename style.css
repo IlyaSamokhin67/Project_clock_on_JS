@@ -1,0 +1,93 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #9fbbcaab;
+}
+
+.clock{
+   width: 400px;
+   height: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url("https://data.pixiz.com/output/user/frame/preview/400x400/0/9/2/9/1089290_05703.jpg");
+   background-size: cover;
+   border-radius: 50%;
+   box-shadow: 0px 5px 10px 11px rgba(34, 60, 80, 0.2);
+}
+
+.clock:before{
+   content: '';
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background: rgb(192, 26, 49);
+   border-radius: 50%;
+   z-index: 4;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+   position: absolute;
+}
+
+.clock .hour, .hr{
+   width: 160px;
+   height: 160px;
+}
+
+.clock .min, .mn{
+   width: 190px;
+   height: 190px;
+}
+
+.clock .sec, .sc{
+   width: 230px;
+   height: 230px;
+}
+
+.hr, .mn, .sc{
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.hr:before{
+   content: '';
+   position: absolute;
+   width: 8px;
+   height: 80px;
+   background: black;
+   border-radius: 10px 10px 0 0;
+   z-index: 1;
+}
+
+.mn:before{
+   content: '';
+   position: absolute;
+   width: 4px;
+   height: 90px;
+   background: black;
+   border-radius: 10px 10px 0 0;
+   z-index: 2;
+}
+
+.sc:before{
+   content: '';
+   position: absolute;
+   width: 2px;
+   height: 150px;
+   background: red;
+   border-radius: 6px 6px 0 0;
+   z-index: 3;
+}
